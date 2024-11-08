@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ЛМС_Курс_приложение</string>
+    <string name="label_hello_world">Привет мир</string>
+    <string name="action_hello">Привет пользователь</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+
+    <EditText
+        android:id="@+id/inputUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize="16sp"
+        />
+
+    <Button
+        android:id="@+id/buttonUserName"
+        android:layout_below="@+id/inputUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/action_hello"
+        android:textSize="16sp"
+        />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
