@@ -4,7 +4,6 @@ import android.content.Context
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
-import android.widget.TextView
 import androidx.core.content.ContextCompat
 
 class TextHighlighter(private val context: Context) {
