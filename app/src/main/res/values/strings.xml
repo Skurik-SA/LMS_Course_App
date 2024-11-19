@@ -2,4 +2,21 @@
     <string name="app_name">LMS_Course_App</string>
     <string name="label_hello_world">Hello World</string>
     <string name="action_hello">Hello User</string>
+    <string name="better_tracker_text">Arguably the best fitness tracker at FEFU</string>
+    <string name="better_tracker_text_under_label">Created by students</string>
+    <string name="sign_up">Sign up</string>
+    <string name="registration">Registration</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="first_name_or_nickname">First name or nickname</string>">
+    <string name="password">Password</string>">
+    <string name="repeat_password">Repeat password</string>">
+    <string name="login">Login</string>">
+    <string name="gender">Gender</string>">
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="T90">T-90M "Breakthrough"</string>
+    <string name="other">Other</string>
+    <string name="privacy_policy">By clicking the button, you agree to the Privacy Policy and personal data processing, and Terms of Service</string>
+    <string name="privacy_policy_key">Privacy Policy</string>
+    <string name="terms_of_service_key">Terms of Service</string>
 </resources>

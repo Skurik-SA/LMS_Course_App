@@ -10,7 +10,15 @@
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+<!--        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>-->
         <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item> <!-- Отключаем ActionBar -->
+        <item name="windowNoTitle">true</item> <!-- Отключаем заголовок -->
+
+        <!-- Прозрачный Status Bar -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <!-- Прозрачный Navigation Bar, у меня нет, но вдруг -->
+<!--        <item name="android:navigationBarColor">@android:color/transparent</item>-->
     </style>
 </resources>

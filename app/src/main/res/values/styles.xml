@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomMaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/purple_500</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">218dp</item>
+        <item name="iconGravity">start</item> <!-- Если нужен значок -->
+    </style>
+
+    <style name="OutlinedButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">@color/purple_500</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="strokeColor">@color/purple_500</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="android:textColor">@color/purple_500</item>
+    </style>
+
+    <style name="NoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <!-- Этот стиль не отображает ActionBar -->
+    </style>
+
+</resources>

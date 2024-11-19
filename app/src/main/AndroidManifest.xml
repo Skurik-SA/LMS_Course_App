@@ -7,21 +7,16 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LMS_Course_App"
         tools:targetApi="31"
         >
 
-        <activity android:name=".HelloWorldActivity"
-            android:label="Hello World"
-            android:exported="true">
-        </activity>
-
-        <activity android:name=".HelloUserActivity"
-            android:label="Hello User"
-            android:exported="true">
+        <activity android:name=".WelcomePageActivity"
+            android:label="WelcomePage"
+            android:exported="true"
+            >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -29,6 +24,10 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".LoginPageActivity" />
+        <activity android:name=".RegisterPageActivity" />
+        <activity android:name=".HelloWorldActivity"/>
+        <activity android:name=".HelloUserActivity"/>
     </application>
 
 </manifest>

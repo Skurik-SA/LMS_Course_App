@@ -3,4 +3,22 @@
     <string name="app_name">ЛМС_Курс_приложение</string>
     <string name="label_hello_world">Привет мир</string>
     <string name="action_hello">Привет пользователь</string>
+    <string name="better_tracker_text">Пожалуй, лучший фитнес трекер в ДВФУ</string>
+    <string name="better_tracker_text_under_label">Созданный студентами</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="registration">Регистрация</string>
+    <string name="already_have_account">Уже есть аккаунт?</string>
+    <string name="first_name_or_nickname">Имя или Никнейм</string>
+    <string name="password">Пароль</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="login">Логин</string>
+    <string name="gender">Пол</string>
+    <string name="male">Мужской</string>
+    <string name="female">Женский</string>
+    <string name="T90">Т-90М "Прорыв"</string>
+    <string name="other">Другое</string>
+    <string name="privacy_policy">Нажимая на кнопку, вы соглашаетесь
+с политикой конфиденциальности и обработки персональных данных, а также принимаете пользовательское соглашение</string>
+    <string name="privacy_policy_key">политикой конфиденциальности</string>
+    <string name="terms_of_service_key">пользовательское соглашение</string>
 </resources>
