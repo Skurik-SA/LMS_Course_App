@@ -42,7 +42,7 @@
         android:layout_marginTop="16dp"
         android:textSize="16sp"
         android:text="@string/better_tracker_text_under_label"
-        app:layout_constraintBottom_toTopOf="@+id/register_button"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_activity"
+        android:title="@string/activity_title"
+        android:state_checked="true"
+        android:icon="@drawable/activity_on_ico" />
+    <item
+        android:id="@+id/nav_profile"
+        android:title="@string/profile_title"
+        android:icon="@drawable/profile_off_ico" />
+</menu>

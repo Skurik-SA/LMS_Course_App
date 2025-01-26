@@ -28,6 +28,8 @@
         <activity android:name=".RegisterPageActivity" />
         <activity android:name=".HelloWorldActivity"/>
         <activity android:name=".HelloUserActivity"/>
+        <activity android:name=".TrainActivity"/>
+
     </application>
 
 </manifest>
