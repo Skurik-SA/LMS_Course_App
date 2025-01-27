@@ -1,0 +1,83 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textActivityType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTime"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/activity_run"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:text="@string/_10_km"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textDistance"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="0dp"
+            android:text="@string/_60_min"
+            android:textSize="14sp"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/iconActivity"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_below="@+id/textTime"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@+id/textActivityType"
+            android:src="@drawable/profile_off_ico" />
+
+        <TextView
+            android:id="@+id/textCreatedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="70dp"
+            android:text="@string/time_today"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

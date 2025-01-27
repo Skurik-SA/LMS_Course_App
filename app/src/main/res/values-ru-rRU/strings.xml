@@ -28,4 +28,27 @@
     <string name="play">play</string>
     <string name="time_to_train">Время потренить</string>
     <string name="start_to_train">Нажимай на кнопку ниже и начинаем трекать активность</string>
+    <string name="distance_km">%1$s км</string>
+    <string name="duration_min">%1$s мин</string>
+    <string name="created_by">Создано: %1$s</string>
+    <string name="exit">Выйти</string>
+    <string name="change_password">Изменить пароль</string>
+    <string name="save_text_button">Сохранить</string>
+    <string name="old_password">Старый пароль</string>
+    <string name="new_password">Новый пароль</string>
+    <string name="start">Старт: %1$s</string>
+    <string name="finish">Финиш: %1$s</string>
+    <string name="_0_hours">0 hours</string>
+    <string name="activity_name">Название активности</string>
+    <string name="back">Back</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+    <string name="_10">10 км</string>
+    <string name="_1_42">1ч 42мин</string>
+    <string name="vertical_divider">|</string>
+    <string name="enter_comment">Введите комментарий</string>
+    <string name="_60_min">60 мин</string>
+    <string name="activity_run">Бег</string>
+    <string name="time_today">Сегодня</string>
+    <string name="_10_km">10 км</string>
 </resources>

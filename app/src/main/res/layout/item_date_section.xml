@@ -1,0 +1,10 @@
+<!-- res/layout/item_date_section.xml -->
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textDateSection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:text="Date Section"
+    android:textSize="24sp"
+    android:textStyle="bold" />

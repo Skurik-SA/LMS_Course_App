@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Верхняя панель с кнопками -->
+    <ImageView
+        android:id="@+id/backToActivitiesButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/back_arrow_svg"
+        android:contentDescription="@string/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textActivityTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/activity_name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backToActivitiesButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/backToActivitiesButton"
+        app:layout_constraintTop_toTopOf="@+id/backToActivitiesButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Кнопка для удаления -->
+
+    <ImageView
+        android:id="@+id/iconActivity"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/profile_off_ico"
+        app:layout_constraintBottom_toBottomOf="@+id/textActivityTitle"
+        app:layout_constraintStart_toEndOf="@+id/textActivityTitle"
+        app:layout_constraintTop_toTopOf="@+id/textActivityTitle"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/iconDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/delete"
+        android:src="@drawable/share_ico"
+        app:layout_constraintBottom_toBottomOf="@+id/textActivityTitle"
+        app:layout_constraintEnd_toStartOf="@id/iconShare"
+        app:layout_constraintTop_toTopOf="@+id/textActivityTitle" />
+
+    <!-- Кнопка для поделиться -->
+    <ImageView
+        android:id="@+id/iconShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
+        android:contentDescription="@string/share"
+        android:src="@drawable/bin"
+        app:layout_constraintBottom_toBottomOf="@+id/textActivityTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textActivityTitle" />
+
+    <!-- Расстояние -->
+
+    <!-- Время активности -->
+
+    <TextView
+        android:id="@+id/textUserNameCreatedBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/textDistance"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textDistance"
+        app:layout_constraintTop_toBottomOf="@+id/backToActivitiesButton" />
+
+    <TextView
+        android:id="@+id/textDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/_10"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/backToActivitiesButton"
+        app:layout_constraintTop_toBottomOf="@+id/textUserNameCreatedBy" />
+
+    <TextView
+        android:id="@+id/textTimeAgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/_0_hours"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textDistance"
+        app:layout_constraintTop_toBottomOf="@id/textDistance" />
+
+    <!-- Время начала -->
+
+    <TextView
+        android:id="@+id/activityDurationTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/_1_42"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textTimeAgo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textTimeAgo"
+        app:layout_constraintTop_toBottomOf="@+id/textTimeAgo" />
+
+    <TextView
+        android:id="@+id/textStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/activityDurationTime"
+        app:layout_constraintTop_toBottomOf="@+id/activityDurationTime" />
+
+    <!-- Время окончания -->
+
+    <!-- Material Input для комментария -->
+
+    <TextView
+        android:id="@+id/slashText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/vertical_divider"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textStartTime"
+        app:layout_constraintStart_toEndOf="@+id/textStartTime"
+        app:layout_constraintTop_toTopOf="@+id/textStartTime"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/finish"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/slashText"
+        app:layout_constraintStart_toEndOf="@+id/slashText"
+        app:layout_constraintTop_toTopOf="@+id/slashText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Поле для ввода комментария -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/commentInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_comment"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textEndTime"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/commentEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:minHeight="100dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
