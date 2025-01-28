@@ -1,36 +1,32 @@
 package com.example.lms_course_app
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.lms_course_app.databinding.TrainPageBinding
 import com.example.lms_course_app.fragments.ActivityFragment
 import com.example.lms_course_app.fragments.ProfileFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class TrainActivity : AppCompatActivity() {
     private var activeFragment: Fragment? = null
-    private lateinit var fab: FloatingActionButton
+    private lateinit var binding: TrainPageBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.train_page)
-
-        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        fab = findViewById(R.id.fab)
-
+        binding = TrainPageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         if (savedInstanceState == null) {
-            // Инициализация с "ActivityFragment"
             val activityFragment = ActivityFragment()
             val profileFragment = ProfileFragment()
 
             supportFragmentManager.beginTransaction()
-                .add(R.id.fragmentContainerView, activityFragment, "ActivityFragment")
+                .add(binding.fragmentContainerView.id, activityFragment, "ActivityFragment")
                 .hide(activityFragment)
                 .commit()
 
             supportFragmentManager.beginTransaction()
-                .add(R.id.fragmentContainerView, profileFragment, "ProfileFragment")
+                .add(binding.fragmentContainerView.id, profileFragment, "ProfileFragment")
                 .hide(profileFragment)
                 .commit()
 
@@ -43,18 +39,24 @@ class TrainActivity : AppCompatActivity() {
         }
 
         // Установка обработчика кликов для BottomNavigationView
-        bottomNavigation.setOnItemSelectedListener { item ->
+        binding.bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_activity -> {
-                    fab.show() // Показываем кнопку FAB
+                    binding.fab.show() // Показываем кнопку FAB
                     switchFragment("ActivityFragment", ActivityFragment())
                 }
                 R.id.nav_profile -> {
-                    fab.hide() // Скрываем кнопку FAB
+                    binding.fab.hide() // Скрываем кнопку FAB
                     switchFragment("ProfileFragment", ProfileFragment())
                 }
             }
             true
+        }
+
+        // Установка обработчика кликов для FAB
+        binding.fab.setOnClickListener {
+            val intent = Intent(this, NewActivityMap::class.java)
+            startActivity(intent)
         }
     }
 

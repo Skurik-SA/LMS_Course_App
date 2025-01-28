@@ -29,6 +29,7 @@
         <activity android:name=".HelloWorldActivity"/>
         <activity android:name=".HelloUserActivity"/>
         <activity android:name=".TrainActivity"/>
+        <activity android:name=".NewActivityMap"/>
 
     </application>
 
