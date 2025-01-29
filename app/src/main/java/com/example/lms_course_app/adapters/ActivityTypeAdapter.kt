@@ -6,9 +6,10 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lms_course_app.R
 import com.example.lms_course_app.databinding.ItemActivityTypeBinding
+import com.example.lms_course_app.models.ActivityType
 
 class ActivityTypeAdapter(
-    private val activityTypes: List<String>,
+    private val activityTypes: List<ActivityType>,
     private val onItemClick: (String) -> Unit
 ) : RecyclerView.Adapter<ActivityTypeAdapter.ActivityTypeViewHolder>() {
 
@@ -17,8 +18,8 @@ class ActivityTypeAdapter(
 
     inner class ActivityTypeViewHolder(private val binding: ItemActivityTypeBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(type: String, isSelected: Boolean) {
-            binding.typeName.text = type
+        fun bind(type: ActivityType, isSelected: Boolean) {
+            binding.typeName.text = type.displayName
 
             // Смена цвета, если выбранная активность в текущей позиции
             val context = binding.root.context
@@ -38,7 +39,7 @@ class ActivityTypeAdapter(
                     val previousPosition = selectedPosition
                     selectedPosition = position
 
-                    onItemClick(type)
+                    onItemClick(type.displayName)
 
                     notifyItemChanged(previousPosition)
                     notifyItemChanged(selectedPosition)

@@ -42,7 +42,7 @@ class ActivityDetailFragment : Fragment() {
 
     private fun setupActivityInfo() {
         // Верхнее меню
-        binding.textActivityTitle.text = activity.activityType
+        binding.textActivityTitle.text = activity.activityType.toString()
         binding.textUserNameCreatedBy.text = if (isUserTab) "@${activity.createdBy}" else ""
 
         // Данные активности

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lms_course_app.R
 import com.example.lms_course_app.databinding.ItemActivityBinding
@@ -14,7 +15,7 @@ import com.example.lms_course_app.models.ActivityModel
 
 
 class ActivitiesAdapter(
-    private val items: List<Any>, // Данные: активности и секции с датами
+    private var items: List<Any>, // Данные: активности и секции с датами
     private val isUserTab: Boolean // Указывает, это вкладка "Пользователи" или "Мои"
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -60,6 +61,15 @@ class ActivitiesAdapter(
 
     override fun getItemCount(): Int = items.size
 
+    // **Метод для обновления данных в адаптере**
+    fun updateData(newItems: List<Any>) {
+        val diffCallback = ActivitiesDiffCallback(items, newItems)
+        val diffResult = DiffUtil.calculateDiff(diffCallback)
+
+        items = newItems
+        diffResult.dispatchUpdatesTo(this)
+    }
+
     // ViewHolder для активности
     class ActivityViewHolder(
         private val binding: ItemActivityBinding,
@@ -69,7 +79,7 @@ class ActivitiesAdapter(
         fun bind(activity: ActivityModel) {
             binding.textDistance.text = "${activity.distance} км"
             binding.textTime.text = activity.getFormattedActivityTime()
-            binding.textActivityType.text = activity.activityType
+            binding.textActivityType.text = activity.activityType.displayName
             binding.textCreatedAt.text = activity.getFormattedTimeAgo()
 
             // Отображаем ник пользователя только на вкладке "Пользователи"
@@ -102,5 +112,31 @@ class ActivitiesAdapter(
         fun bind(date: String) {
             binding.textDateSection.text = date
         }
+    }
+}
+
+class ActivitiesDiffCallback(
+    private val oldList: List<Any>,
+    private val newList: List<Any>
+) : DiffUtil.Callback() {
+
+    override fun getOldListSize(): Int = oldList.size
+    override fun getNewListSize(): Int = newList.size
+
+    override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+        val oldItem = oldList[oldItemPosition]
+        val newItem = newList[newItemPosition]
+
+        return if (oldItem is ActivityModel && newItem is ActivityModel) {
+            oldItem.id == newItem.id
+        } else if (oldItem is String && newItem is String) {
+            oldItem == newItem
+        } else {
+            false
+        }
+    }
+
+    override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+        return oldList[oldItemPosition] == newList[newItemPosition]
     }
 }

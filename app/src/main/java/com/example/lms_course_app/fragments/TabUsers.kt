@@ -24,29 +24,29 @@ class TabUsers : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerViewUsers)
         val textNoActivities: TextView = view.findViewById(R.id.textNoActivities)
 
-        var activities = listOf<ActivityModel>() // Пока пустой список для проверки
-
-        // Подготовить данные
-        activities = listOf(
-            ActivityModel(5.0f, 3600, System.currentTimeMillis() / 1000, System.currentTimeMillis() / 1000 + 1000,"Бег", System.currentTimeMillis() / 1000, "Я"),
-            ActivityModel(10.0f, 5400, System.currentTimeMillis() / 1000, System.currentTimeMillis() / 1000 + 1000, "Велосипед", System.currentTimeMillis() / 1000 - 86400, "Мария"),
-            ActivityModel(3.5f, 1800, System.currentTimeMillis() / 1000, System.currentTimeMillis() / 1000 + 1000,"Прогулка", System.currentTimeMillis() / 1000 - 2 * 86400, "Андрей")
-        )
-
-        val groupedActivities = ActivityDateGroup.groupActivitiesByDate(activities)
-
-        if (groupedActivities.isEmpty()) {
-            textNoActivities.visibility = View.VISIBLE
-            recyclerView.visibility = View.GONE
-        }
-        else {
-            textNoActivities.visibility = View.GONE
-            recyclerView.visibility = View.VISIBLE
-
-            // Устанавливаем LayoutManager и адаптер
-            recyclerView.layoutManager = LinearLayoutManager(requireContext())
-            recyclerView.adapter = ActivitiesAdapter(groupedActivities, isUserTab = true)
-        }
+//        var activities = listOf<ActivityModel>() // Пока пустой список для проверки
+//
+//        // Подготовить данные
+//        activities = listOf(
+//            ActivityModel(5.0f, 3600, System.currentTimeMillis() / 1000, System.currentTimeMillis() / 1000 + 1000,"Бег", System.currentTimeMillis() / 1000, "Я"),
+//            ActivityModel(10.0f, 5400, System.currentTimeMillis() / 1000, System.currentTimeMillis() / 1000 + 1000, "Велосипед", System.currentTimeMillis() / 1000 - 86400, "Мария"),
+//            ActivityModel(3.5f, 1800, System.currentTimeMillis() / 1000, System.currentTimeMillis() / 1000 + 1000,"Прогулка", System.currentTimeMillis() / 1000 - 2 * 86400, "Андрей")
+//        )
+//
+//        val groupedActivities = ActivityDateGroup.groupActivitiesByDate(activities)
+//
+//        if (groupedActivities.isEmpty()) {
+//            textNoActivities.visibility = View.VISIBLE
+//            recyclerView.visibility = View.GONE
+//        }
+//        else {
+//            textNoActivities.visibility = View.GONE
+//            recyclerView.visibility = View.VISIBLE
+//
+//            // Устанавливаем LayoutManager и адаптер
+//            recyclerView.layoutManager = LinearLayoutManager(requireContext())
+//            recyclerView.adapter = ActivitiesAdapter(groupedActivities, isUserTab = true)
+//        }
 
         return view
     }
